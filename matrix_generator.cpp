@@ -9,7 +9,7 @@
 void Input_File_Parameters(unsigned int& rows_out, unsigned int& columns_out,
 			   unsigned int& number_out, std::string& file_name_out)
 {
-       	std::cout << "For generation of matrix file you should\n";	
+       	std::cout << "To generate matrix file you should\n";	
 	std::cout << "enter file names: ";
 	std::cin >> file_name_out;
 	std::cout << "enter number of rows: ";
@@ -20,7 +20,7 @@ void Input_File_Parameters(unsigned int& rows_out, unsigned int& columns_out,
 	std::cin >> number_out;
 }
 
-void Matrix_File_Generation(unsigned int rows, unsigned int columns,
+void Matrix_File_Generator(unsigned int rows, unsigned int columns,
 				unsigned int number, std::string file_name)
 {
 	std::ofstream fout(file_name, std::ios::out);
@@ -33,8 +33,9 @@ void Matrix_File_Generation(unsigned int rows, unsigned int columns,
 	fout << rows << " x " << columns << " (matrix_dimensions)\n";
 	
 	srand(time(0));
-	while (number)
+	for (int i = 1; i <= number; ++i)
 	{
+		fout << "<" << i << ">\n";
 		int n;
 		for(int i = 0; i < rows; ++i)
         	{
@@ -52,7 +53,6 @@ void Matrix_File_Generation(unsigned int rows, unsigned int columns,
 	       	}
 
 		fout << '\n';
-		--number;
 	}
 	std::cout << file_name << " file successfully created!\n";
 }
@@ -67,9 +67,9 @@ int main()
 
 		Input_File_Parameters(rows, columns, number, file_name);
 
-		Matrix_File_Generation(rows, columns, number, file_name);
+		Matrix_File_Generator(rows, columns, number, file_name);
 		
-		std::cout << "To create the next file, enter \" 1 \" or any key to stop the generation process: ";
+		std::cout << "To generate the next file, enter \" 1 \" or any key to stop the generation process: ";
 		std::cin >> step;
 
 	} while(step == 1);

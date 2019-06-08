@@ -1,0 +1,17 @@
+Divergence of matrix number: <2> != <23>
+Divergence of matrices: <3> , element(15, 0)
+Divergence of matrix number: <6> != <16>
+Divergence of matrices: <6> , element(1, 5)
+Divergence of matrices: <7> , element(7, 0)
+Divergence of matrices: <11> , element(0, 0)
+Divergence of matrices: <31> , element(11, 0)
+Divergence of matrices: <35> , element(16, 7)
+Divergence of matrices: <47> , element(19, 11)
+Divergence of matrix number: <2510> != <251>
+Divergence of matrices: <2510> , element(7, 5)
+Divergence of matrices: <2698> , element(17, 5)
+
+=======================================================================
+                     CHECKED MATRICES: 2700
+=======================================================================
+Divergence of matrices: quantity = 9, percentage = 0.33 %.
